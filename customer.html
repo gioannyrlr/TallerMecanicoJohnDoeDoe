@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Taller John Doe & Doe - Registro de Clientes</title>
+<title>Taller John Doe & Doe - Clientes</title>
   
 <!-- Icon -->
 <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
@@ -49,16 +49,16 @@
     <h3>Registro de Clientes</h3>
     <form id="customerForm">
         <label for="customerIdentification">Identificación del Cliente</label>
-        <input type="text" id="customerIdentification" required>
+        <input type="text" id="customerIdentification" maxlength="8" pattern="[0-8]+" placeholder="Ej: 30181664" required>
 
         <label for="customerName">Nombre del Cliente</label>
-        <input type="text" id="customerName" required>
+        <input type="text" id="customerName" maxlength="50" pattern="[a-zA-ZñÑáéíóúAEIOU]+" placeholder="Ej: Gioanny Lopez" required>
 
         <label for="customerAddress">Dirección del Cliente</label>
-        <input type="text" id="customerAddress" required>
+        <input type="text" id="customerAddress" maxlength="50" pattern="[a-zA-ZñÑáéíóúAEIOU]+" placeholder="Ej: La Paragua" required>
 
         <label for="customerPhone">Teléfono del Cliente</label>
-        <input type="tel" id="customerPhone" required>
+        <input type="number" id="customerPhone" maxlength="11" placeholder="04246855898" required>
 
         <button type="button" class="button-registrar" onclick="registerCustomer()">Registrar</button>
     </form>

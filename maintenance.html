@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Taller John Doe & Doe - Registro de Mantenimiento</title>
+<title>Taller John Doe & Doe - Mantenimiento</title>
 
 <!-- Icon -->
 <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
@@ -49,7 +49,7 @@
     <h3>Registro de Mantenimiento</h3>
     <form id="maintenanceForm">
         <label for="maintenanceVehicle">Placa del Vehículo</label>
-        <input type="text" id="maintenanceVehicle" required>
+        <input type="text" id="maintenanceVehicle" minlength="7" maxlength="7" placeholder="Ej: AA6850A" required>
 
         <label for="maintenanceType">Tipo de Mantenimiento</label>
         <select id="maintenanceType" required>
@@ -59,7 +59,7 @@
         </select>
 
         <label for="maintenanceDate">Fecha de Mantenimiento</label>
-        <input type="date" id="maintenanceDate" required>
+        <input type="datetime-local" id="maintenanceDate" required>
 
         <button type="button" class="button-registrar" onclick="registerMaintenance()">Registrar</button>
     </form>

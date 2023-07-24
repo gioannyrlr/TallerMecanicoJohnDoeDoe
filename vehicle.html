@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Taller John Doe & Doe - Registro de Vehículos</title>
+<title>Taller John Doe & Doe - Vehículos</title>
 
 <!-- Icon -->
 <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
@@ -49,16 +49,16 @@
     <h3>Registro de Vehículos</h3>
     <form id="vehicleForm">
         <label for="vehicleOwner">Propietario del Vehículo</label>
-        <input type="text" id="vehicleOwner" required>
+        <input type="text" id="vehicleOwner" maxlength="50" pattern="[a-zA-ZñÑáéíóúAEIOU]+" placeholder="Ej: Gioanny Lopez" required>
 
         <label for="vehicleMake">Marca del Vehículo</label>
-        <input type="text" id="vehicleMake" required>
+        <input type="text" id="vehicleMake" maxlength="20" pattern="[a-zA-ZñÑáéíóúAÉÍÓÚ]+" placeholder="Ej: Ford" required>
 
         <label for="vehicleModel">Modelo del Vehículo</label>
-        <input type="text" id="vehicleModel" required>
+        <input type="text" id="vehicleModel"  maxlength="20" pattern="[a-zA-ZñÑáéíóúAÉÍÓÚ]+" placeholder="Ej: Focus" required>
 
         <label for="vehiclePlate">Placa del Vehículo</label>
-        <input type="text" id="vehiclePlate" required>
+        <input type="text" id="vehiclePlate"  minlength="7" maxlength="7" placeholder="Ej: AA6850A" required>
 
         <button type="button" class="button-registrar" onclick="registerVehicle()">Registrar</button>
     </form>
