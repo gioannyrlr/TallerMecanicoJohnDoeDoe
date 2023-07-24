@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Taller John Doe & Doe - Registro de Mantenimiento</title>
+
+<!-- Icon -->
+<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg main-nav px-0" style="background-color: white;">
+                <a class="navbar-brand" href="#">
+                    <img src="img/icon.png" class="nav-icon">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar icon-bar-1"></span>
+                    <span class="icon-bar icon-bar-2"></span>
+                    <span class="icon-bar icon-bar-3"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ml-auto text-uppercase f1">
+                        <li>
+                        <a href="index.html">inicio</a>
+                        </li>
+                        <li>
+                        <a href="customer.html">clientes</a>
+                        </li>
+                        <li>
+                        <a href="vehicle.html">vehículos</a>
+                        </li>
+                        <li>
+                        <a href="maintenance.html" class="active active-first">mantenimiento</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <h3>Registro de Mantenimiento</h3>
+    <form id="maintenanceForm">
+        <label for="maintenanceVehicle">Placa del Vehículo</label>
+        <input type="text" id="maintenanceVehicle" required>
+
+        <label for="maintenanceType">Tipo de Mantenimiento</label>
+        <select id="maintenanceType" required>
+            <option disabled selected>Selecciona una opción...</option>
+            <option value="preventivo">Preventivo</option>
+            <option value="correctivo">Correctivo</option>
+        </select>
+
+        <label for="maintenanceDate">Fecha de Mantenimiento</label>
+        <input type="date" id="maintenanceDate" required>
+
+        <button type="button" class="button-registrar" onclick="registerMaintenance()">Registrar</button>
+    </form>
+
+    <h3>Mantenimientos Registrados</h3>
+    <div class="table-responsive">
+        <table class="table align-middle" id="customerTable">
+            <thead>
+                    <th class="text-center">#</th>
+                    <th class="text-center">Placa del Vehículo</th>
+                    <th class="text-center">Tipo de Mantenimiento</th>
+                    <th class="text-center">Fecha de Mantenimiento</th>
+                    <th class="text-center">Acciones</th>
+            </thead>
+    
+            <tbody id="maintenanceList">
+            <!-- Aquí se mostrarán los clientes registrados -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/maintenance.js"></script>
+</body>
+</html>

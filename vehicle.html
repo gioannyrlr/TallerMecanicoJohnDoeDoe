@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Taller John Doe & Doe - Registro de Vehículos</title>
+
+<!-- Icon -->
+<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg main-nav px-0" style="background-color: white;">
+                <a class="navbar-brand" href="#">
+                    <img src="img/icon.png" class="nav-icon">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar icon-bar-1"></span>
+                    <span class="icon-bar icon-bar-2"></span>
+                    <span class="icon-bar icon-bar-3"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ml-auto text-uppercase f1">
+                        <li>
+                        <a href="index.html">inicio</a>
+                        </li>
+                        <li>
+                        <a href="customer.html">clientes</a>
+                        </li>
+                        <li>
+                        <a href="vehicle.html" class="active active-first">vehículos</a>
+                        </li>
+                        <li>
+                        <a href="maintenance.html">mantenimiento</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <h3>Registro de Vehículos</h3>
+    <form id="vehicleForm">
+        <label for="vehicleOwner">Propietario del Vehículo</label>
+        <input type="text" id="vehicleOwner" required>
+
+        <label for="vehicleMake">Marca del Vehículo</label>
+        <input type="text" id="vehicleMake" required>
+
+        <label for="vehicleModel">Modelo del Vehículo</label>
+        <input type="text" id="vehicleModel" required>
+
+        <label for="vehiclePlate">Placa del Vehículo</label>
+        <input type="text" id="vehiclePlate" required>
+
+        <button type="button" class="button-registrar" onclick="registerVehicle()">Registrar</button>
+    </form>
+
+    <h3>Vehículos Registrados</h3>
+    <div class="table-responsive">
+        <table class="table align-middle" id="customerTable">
+            <thead>
+                    <th class="text-center">#</th>
+                    <th class="text-center">Propietario</th>
+                    <th class="text-center">Marca</th>
+                    <th class="text-center">Modelo</th>
+                    <th class="text-center">Placa</th>
+                    <th class="text-center">Acciones</th>
+            </thead>
+    
+            <tbody id="vehicleList">
+            <!-- Aquí se mostrarán los clientes registrados -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/vehicle.js"></script>
+</body>
+</html>
